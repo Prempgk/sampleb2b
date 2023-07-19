@@ -2,17 +2,18 @@ version: '3'
 services:
   db:
     image: mysql:8
-    ports:
-      - "3307:3306"
     environment:
-      - MYSQL_DATABASE='sampleb2b'
-      - MYSQL_USER='root1'
-      - MYSQL_PASSWORD='Prem1999#'
-      - MYSQL_ROOT_PASSWORD='1234'
-      - MYSQL_HOST='127.0.0.1'
+      - MYSQL_DATABASE=sampleb2b
+      - MYSQL_USER=root1
+      - MYSQL_PORT=3306
+      - MYSQL_PASSWORD=Prem1999#
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_HOST=127.0.0.1
     volumes:
       - /tmp/app/mysqld:/var/run/mysqld
       - ./db:/var/lib/mysql
+    ports:
+      - "3307:3306"
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
