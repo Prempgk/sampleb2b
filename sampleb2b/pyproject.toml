@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "sampleb2b"
+version = "0.1.0"
+description = "A sample project for b2b application"
+authors = ["Prempgk"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
