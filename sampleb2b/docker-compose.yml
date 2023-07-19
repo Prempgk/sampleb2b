@@ -4,9 +4,9 @@ services:
     image: mysql:8
     environment:
       - MYSQL_DATABASE=sampleb2b
-      - MYSQL_USER=root1
+      - MYSQL_USER=root
       - MYSQL_PORT=3306
-      - MYSQL_PASSWORD=Prem1999#
+      - MYSQL_PASSWORD=1234
       - MYSQL_ROOT_PASSWORD=1234
       - MYSQL_HOST=127.0.0.1
     volumes:
